@@ -10,7 +10,7 @@ It offers detailed tour packages, connects tourists with expert local guides, an
 
 ## 🔗 Live Project Links
 
-- **Frontend:** [https://musafirtraveller.vercel.app/](https://musafirtraveller.vercel.app/)
+- **Frontend:** [musafirtraveller](https://marvelous-gaufre-bd3a39.netlify.app/)
 - **Backend API:** [https://musafir-server.vercel.app/](https://musafir-server.vercel.app/)
 
 ---
