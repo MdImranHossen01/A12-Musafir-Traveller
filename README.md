@@ -1,6 +1,4 @@
-Here’s your **complete single-file `README.md`** for **Musafir Traveller**, written in a clean Markdown format with the banner image fixed so it works on GitHub.
 
-````markdown
 # 🌏 Musafir Traveller - A Full-Stack Tourism Management Platform
 
 ![Musafir Traveller Screenshot](https://i.ibb.co/1JJZ8P1F/musafir.png)
