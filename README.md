@@ -67,7 +67,26 @@ This is a full-stack project. You will need to run both the client and the serve
     ```
 3.  **Set Up Environment Variables:**
     * Create a file named `.env` in the `/server` folder.
-    * Add all your secret keys for MongoDB, JWT, Stripe, Cloudinary, and Firebase Admin.
+```bash
+
+# Server Port
+PORT=5000
+
+# MongoDB Connection String (replace with your own)
+MONGO_URI=mongodb+srv://user:password@cluster0.gxzx6qo.mongodb.net/musafir?retryWrites=true&w=majority&appName=Cluster0
+
+# JSON Web Token Secret
+JWT_SECRET=your-jwt-secret
+
+# Stripe Secret Key (get from your Stripe dashboard)
+STRIPE_SECRET_KEY=your-stripe-secret-key
+NODE_ENV=development
+CLOUDINARY_CLOUD_NAME=
+CLOUDINARY_API_KEY=
+CLOUDINARY_API_SECRET=
+VITE_IMGBB_API_KEY=
+
+```
 4.  **Run the Development Server:**
     ```bash
     npm start
@@ -87,12 +106,22 @@ This is a full-stack project. You will need to run both the client and the serve
 3.  **Set Up Environment Variables:**
     * Create a file named `.env.local` in the `/client` folder.
     * Add your Firebase and Stripe public keys, and set the API URL to your local server.
-        ```env
-        VITE_API_URL=http://localhost:5000
-        VITE_API_KEY=your_firebase_api_key
-        VITE_AUTH_DOMAIN=your_firebase_auth_domain
-        # ... and all other VITE_ variables
-        ```
+```env
+VITE_API_URL=https://musafir-server.vercel.app
+
+VITE_LIVE_SITE_URL=http://localhost:5173
+
+VITE_API_KEY=
+VITE_AUTH_DOMAIN=
+VITE_PROJECT_ID=
+VITE_STORAGE_BUCKET=
+VITE_MESSAGING_SENDER_ID=
+VITE_APP_ID=1:
+
+VITE_STRIPE_PK_KEY=
+VITE_STRIPE_TEST_MODE=true
+
+```
 4.  **Run the Development Server:**
     ```bash
     npm run dev
