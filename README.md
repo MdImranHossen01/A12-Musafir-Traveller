@@ -165,11 +165,6 @@ Works seamlessly on:
 
 ---
 
-## 📷 Screenshot
-
-![Musafir Traveller Screenshot](https://i.ibb.co/1JJZ8P1F/musafir.png)
-
----
 
 **Musafir Traveller – Explore Bangladesh, one journey at a time!** 🏞
 
