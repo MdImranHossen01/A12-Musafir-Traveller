@@ -2,8 +2,8 @@
 
 Welcome to Musafir Traveller, a comprehensive, full-stack tourism management platform designed to help travelers explore the beauty of Bangladesh. This application provides detailed tour packages, connects tourists with expert local guides, and fosters a community where users can share their travel stories. This repository contains the complete MERN stack application, with the React client in the `/client` directory and the Node.js/Express server in the `/server` directory.
 
-![Musafir Traveller Screenshot](https://i.ibb.co/your-screenshot-link-here.png](https://ibb.co.com/M55nMtrF)
-*(**Note:** Please take a beautiful screenshot of your homepage, upload it to a site like [ImgBB](https://imgbb.com/), and replace the link above.)*
+![Musafir Traveller Screenshot](https://i.ibb.co.com/1JJZ8P1F/musafir.png)
+
 
 ---
 
