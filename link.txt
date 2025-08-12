@@ -1,6 +1,7 @@
 Live link: https://marvelous-gaufre-bd3a39.netlify.app/
-Client Repo: https://github.com/Programming-Hero-Web-Course4/b11a12-client-side-MdImranHossen01
-Server Repo: https://github.com/Programming-Hero-Web-Course4/b11a12-server-side-MdImranHossen01.git
+Project Repo:https://github.com/MdImranHossen01/A12-Musafir-Traveller
+Client Repo: https://github.com/MdImranHossen01/A12-Musafir-Traveller/tree/main/client
+Server Repo: https://github.com/MdImranHossen01/A12-Musafir-Traveller/tree/main/server
 Admin email: johndoe2@gmail.com
 Admin password: JohnDoe@1
 
