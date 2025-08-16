@@ -7,7 +7,7 @@ import Logo from './Logo';
 const Footer = () => {
   return (
     <footer className="bg-gray-800 text-gray-300">
-      <div className="container mx-auto p-10">
+      <div className="container mx-auto py-10 px-4">
         <div className="footer grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {/* Brand and Logo Section */}
           <nav>
