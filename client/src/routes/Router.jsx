@@ -14,7 +14,7 @@ import ManageStories from "../pages/Dashboard/Tourist/ManageStories";
 import JoinAsGuide from "../pages/Dashboard/Tourist/JoinAsGuide";
 import MyAssignedTours from "../pages/Dashboard/TourGuide/MyAssignedTours";
 import AdminRoute from "./AdminRoute";
-import AdminProfile from "../pages/Dashboard/Admin/AdminProfile";
+
 import AddPackage from "../pages/Dashboard/Admin/AddPackage";
 import ManageUsers from "../pages/Dashboard/Admin/ManageUsers";
 import ManageCandidates from "../pages/Dashboard/Admin/ManageCandidates";
@@ -25,9 +25,12 @@ import PackageDetails from "../pages/PackageDetails";
 import AllTrips from "../pages/AllTrips";
 import AboutUs from "../pages/AboutUs";
 import TourGuideProfile from "../pages/TourGuideProfile";
-import EditStory from "../pages/Dashboard/Tourist/EditStory"; // <-- Import the new component
-import PaymentPage from "../pages/PaymentPage";
+import EditStory from "../pages/Dashboard/Tourist/EditStory";
 import StoryDetails from "../pages/StoryDetails";
+import AdminOverview from "../pages/Dashboard/Admin/AdminOverview"; // <-- Import the new component
+import Cookie from "../pages/Cookie";
+import Terms from "../pages/Terms";
+import Privacy from "../pages/Privacy";
 
 const router = createBrowserRouter([
   // Main Site Routes
@@ -57,18 +60,12 @@ const router = createBrowserRouter([
       { path: "/community", element: <AllStories /> },
       { path: "/all-trips", element: <AllTrips /> },
       { path: "/about-us", element: <AboutUs /> },
+      { path: "/cookie-policy", element: <Cookie /> },
+      { path: "/terms-of-use", element: <Terms /> },
+      { path: "/privacy-policy", element: <Privacy /> },
       { path: "/package/:id", element: <PackageDetails /> },
       { path: "/guide/:id", element: <TourGuideProfile /> },
-      { path: '/story/:id', element: <StoryDetails /> },
-      {
-        path: "/payment/:id",
-        element: (
-          <PrivateRoute>
-            <PaymentPage />
-          </PrivateRoute>
-        ), // Ensure user is logged in
-     
-      },
+      { path: "/story/:id", element: <StoryDetails /> },
     ],
   },
   // Dashboard Routes
@@ -80,21 +77,30 @@ const router = createBrowserRouter([
       </PrivateRoute>
     ),
     children: [
+      // Common Routes for All Roles
+      { path: "", element: <ManageProfile /> },
       { path: "manage-profile", element: <ManageProfile /> },
       { path: "add-story", element: <AddStory /> },
       { path: "manage-stories", element: <ManageStories /> },
-      { path: "edit-story/:id", element: <EditStory /> }, // <-- Add the new route here
+      { path: "edit-story/:id", element: <EditStory /> },
+
+      // Tourist Routes
       { path: "my-bookings", element: <MyBookings /> },
       { path: "join-as-guide", element: <JoinAsGuide /> },
+
+      // Tour Guide Routes
       { path: "my-assigned-tours", element: <MyAssignedTours /> },
+
+      // Admin Routes (Protected by AdminRoute)
       {
-        path: "admin-profile",
+        path: "overview",
         element: (
           <AdminRoute>
-            <AdminProfile />
+            <AdminOverview />
           </AdminRoute>
         ),
-      },
+      }, // <-- Add the new route here
+
       {
         path: "add-package",
         element: (

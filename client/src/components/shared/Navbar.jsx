@@ -1,21 +1,31 @@
 import React, { useContext } from 'react';
-// FIX 1: Correctly import from 'react-router-dom'
-import { Link, NavLink } from 'react-router';
+// Corrected import from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom';
 
-// FIX 2: Import your REAL AuthContext from your providers folder
 import { AuthContext } from '../../providers/AuthProvider';
 import Logo from './Logo';
 
 const Navbar = () => {
-  // This now uses your actual user, loading state, and logout function
+  // You already have the user state here
   const { user, loading, logOut } = useContext(AuthContext);
 
   const navLinks = (
     <>
       <li><NavLink to="/" className={({ isActive }) => isActive ? "text-primary font-bold" : "font-medium"}>Home</NavLink></li>
-      <li><NavLink to="/community" className={({ isActive }) => isActive ? "text-primary font-bold" : "font-medium"}>Community</NavLink></li>
-      <li><NavLink to="/about-us" className={({ isActive }) => isActive ? "text-primary font-bold" : "font-medium"}>About Us</NavLink></li>
+      
+      {/*
+        * SOLUTION: Conditionally render links based on user state.
+        * The following links will only be rendered if 'user' is not null.
+      */}
+      {user && (
+        <>
+          <li><NavLink to="/community" className={({ isActive }) => isActive ? "text-primary font-bold" : "font-medium"}>Community</NavLink></li>
+          <li><NavLink to="/add-story" className={({ isActive }) => isActive ? "text-primary font-bold" : "font-medium"}>Add Story</NavLink></li>
+        </>
+      )}
+
       <li><NavLink to="/all-trips" className={({ isActive }) => isActive ? "text-primary font-bold" : "font-medium"}>Trips</NavLink></li>
+      <li><NavLink to="/about-us" className={({ isActive }) => isActive ? "text-primary font-bold" : "font-medium"}>About Us</NavLink></li>
     </>
   );
 
@@ -36,9 +46,9 @@ const Navbar = () => {
             {navLinks}
           </ul>
         </div>
-        <Link to="/" className=" text-xl md:text-2xl gap-1">
+        <div to="/" className=" text-xl md:text-2xl gap-1">
           <Logo></Logo>
-        </Link>
+        </div>
       </div>
 
       {/* Center */}
@@ -53,7 +63,6 @@ const Navbar = () => {
         {loading ? (
           <span className="loading loading-spinner text-primary"></span>
         ) : user ? (
-          // FIX 3: This is the reliable DaisyUI dropdown implementation
           <div className="dropdown dropdown-end">
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
               <div className="w-10 rounded-full ring-2 ring-primary ring-offset-base-100 ring-offset-2" title={user.displayName}>
@@ -77,7 +86,6 @@ const Navbar = () => {
             </ul>
           </div>
         ) : (
-          // Logged-out user view
           <div className="space-x-2">
             <Link to="/login" className="btn btn-outline btn-primary">Login</Link>
             <Link to="/register" className="btn btn-primary text-white">Register</Link>
