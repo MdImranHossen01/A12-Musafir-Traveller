@@ -83,9 +83,7 @@ const Banner = () => {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5, delay: 0.7 }}
                   >
-                    <button className="btn btn-primary text-white shadow-lg">
-                      {slide.cta}
-                    </button>
+                    
                   </motion.div>
                 </div>
               </div>
