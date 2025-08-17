@@ -14,19 +14,19 @@ const sliderContent = [
     image: "https://i.ibb.co/d4jLqtGN/pngtree-nice-deer-standing-water.webp",
     title: "Explore the Mystical Sundarbans",
     description: "Journey into the world's largest mangrove forest, home of the Royal Bengal Tiger.",
-    cta: "Wildlife Tours"
+    
   },
   {
     image: "https://i.ibb.co/xtDjbbK1/sajek.webp",
     title: "Discover the Kingdom of Clouds",
     description: "Witness the breathtaking beauty of Sajek Valley, where clouds touch the hills.",
-    cta: "Hill Station Packages"
+    
   },
   {
     image: "https://i.ibb.co/Qjr8R41K/Cox-s-Bazar-Sea-Beach-6772e5838c.webp",
     title: "Relax on the World's Longest Beach",
     description: "Unwind on the sandy shores of Cox's Bazar, stretching over 120 km.",
-    cta: "Beach Vacations"
+    
   }
 ];
 
