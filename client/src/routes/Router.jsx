@@ -58,6 +58,7 @@ const router = createBrowserRouter([
       },
       { path: "/offer-announcements", element: <OfferAnnouncements /> },
       { path: "/community", element: <AllStories /> },
+      { path: "/add-story", element: <AddStory /> },
       { path: "/all-trips", element: <AllTrips /> },
       { path: "/about-us", element: <AboutUs /> },
       { path: "/cookie-policy", element: <Cookie /> },
@@ -66,6 +67,7 @@ const router = createBrowserRouter([
       { path: "/package/:id", element: <PackageDetails /> },
       { path: "/guide/:id", element: <TourGuideProfile /> },
       { path: "/story/:id", element: <StoryDetails /> },
+
     ],
   },
   // Dashboard Routes
