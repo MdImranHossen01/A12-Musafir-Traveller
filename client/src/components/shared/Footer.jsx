@@ -36,9 +36,6 @@ const Footer = () => {
             <Link to="/about-us" className="link link-hover">
               About Us
             </Link>
-            <Link to="/contact" className="link link-hover">
-              Contact
-            </Link>
           </nav>
 
           {/* Legal Section */}
