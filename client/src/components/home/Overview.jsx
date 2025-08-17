@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaPlay } from 'react-icons/fa';
+import { Link } from 'react-router';
 
 const Overview = () => {
   const [showVideo, setShowVideo] = useState(false);
@@ -31,9 +32,9 @@ const Overview = () => {
                 <span>Experience vibrant local cultures and traditions</span>
               </li>
             </ul>
-            <button className="btn btn-primary px-8 py-3">
+            <Link to="/community" className="btn btn-primary px-8 py-3">
               Explore Tours
-            </button>
+            </Link>
           </div>
 
           {/* Video - Right Side */}
