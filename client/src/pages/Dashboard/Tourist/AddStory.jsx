@@ -70,7 +70,7 @@ const AddStory = () => {
     };
 
     return (
-        <div className="w-full max-w-2xl p-8 space-y-6 bg-white rounded-lg shadow-md">
+        <div className="w-full max-w-2xl p-8 mx-auto space-y-6 bg-white rounded-lg shadow-md">
             <h2 className="text-3xl font-bold text-center text-gray-800">Add Your Story</h2>
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
                 <div>
