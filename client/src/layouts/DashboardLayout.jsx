@@ -145,7 +145,7 @@ const DashboardLayout = () => {
         <ul className="menu p-4 w-80 min-h-full bg-base-100 text-base-content">
           <div className="p-4 mb-4 text-center border-b">
             <Logo></Logo>
-            
+
             <p className="text-sm capitalize">{role} Panel</p>
           </div>
           {isRoleLoading ? (

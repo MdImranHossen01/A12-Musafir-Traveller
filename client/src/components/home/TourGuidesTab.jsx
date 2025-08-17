@@ -96,11 +96,7 @@ const TourGuidesTab = () => {
                 ))}
             </div>
             
-            <div className="text-center">
-                <Link to="/all-guides" className="btn btn-outline btn-primary">
-                    Browse All Guides
-                </Link>
-            </div>
+           
         </div>
     );
 };
